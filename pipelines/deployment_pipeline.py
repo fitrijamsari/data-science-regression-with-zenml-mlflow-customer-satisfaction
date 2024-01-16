@@ -14,12 +14,11 @@ from zenml.integrations.mlflow.services import MLFlowDeploymentService
 from zenml.integrations.mlflow.steps import mlflow_model_deployer_step
 from zenml.steps import BaseParameters, Output
 
+from pipelines.utils import get_data_for_test
 from steps.clean_data import clean_data
 from steps.evaluation import evaluate_model
 from steps.ingest_data import ingest_data
 from steps.model_train import train_model
-
-from ..utils.common_utils import get_data_for_test
 
 # Deploy the model if, the model achieve certain accuracy
 docker_settings = DockerSettings(required_integrations=[MLFLOW])

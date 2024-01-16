@@ -42,7 +42,7 @@ def main(config: str, min_accuracy: float):
 
     if deploy:
         continuous_deployment_pipeline(
-            data_path="/Users/ofotech_fitri/Documents/fitri_github/data-science-customer-satisfaction-with-zenml/data/olist_customers_dataset.csv",
+            data_path="/Users/ofotech_fitri/Documents/fitri_github/data-science-regression-with-zenml-mlflow-customer-satisfaction/data/olist_customers_dataset.csv",
             min_accuracy=min_accuracy,
             workers=3,
             timeout=60,

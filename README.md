@@ -174,13 +174,13 @@ python run_deployment.py
 
 #### VIEW PIPELINE ON ZenML
 
-Upon running run_pipeline.py, local ZenML server (http://127.0.0.1:8237) will appear:
+Upon running run_deployment.py, local ZenML server (http://127.0.0.1:8237) will appear:
 
-![ZenML Training Pipeline UI](./img/zenml_training_pipeline.png)
+![ZenML Deployment Pipeline UI](./img/zenml_deployment.png)
 
 #### VIEW MODEL EXPERIMENT ON MLFLOW
 
-Upon running run_pipeline.py, mlflow ui url will be displayed on log. Copy the whole line and run on terminal e.g.:
+Upon running run_deployment.py, mlflow ui url will be displayed on log. Copy the whole line and run on terminal e.g.:
 
 ```bash
  mlflow ui --backend-store-uri 'LOCAL URI'
@@ -188,6 +188,22 @@ Upon running run_pipeline.py, mlflow ui url will be displayed on log. Copy the w
 
 You may click on the local MLFlow server displayed on terminal e.g http://127.0.0.1:5000:
 You may review and compare various model performance on MLFlow UI
+
+# DEBUG/ISSUES
+
+1. ZenML Connection Error
+   If you get the following error:
+
+```
+ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+```
+
+Just reconnect the zenml server:
+
+```bash
+ zenml down
+ zenml up
+```
 
 # REFERENCE
 
